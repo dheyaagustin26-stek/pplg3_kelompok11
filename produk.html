@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Produk</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="../index.html">
+            <span class="brand-logo">A</span>
+            <span>Admin<span class="accent">Panel</span></span>
+        </a>
+        <p class="nav-caption">MENU UTAMA</p>
+        <nav class="nav-menu">
+            <a class="nav-link" href="../index.html">▦ Dashboard</a>
+            <a class="nav-link" href="pengguna.html">♙ Data Pengguna</a>
+            <a class="nav-link active" href="produk.html">▣ Data Produk</a>
+            <a class="nav-link" href="laporan.html">▤ Laporan</a>
+            <a class="nav-link" href="kontak.html">✉ Formulir Kontak</a>
+            <a class="nav-link" href="tentang.html">ⓘ Tentang Proyek</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <h1>Data Produk</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <section class="page-heading">
+                <div>
+                    <h2>Daftar Produk</h2>
+                    <p>Informasi produk yang tersedia.</p>
+                </div>
+                <a class="button-primary" href="kontak.html">
+                    + Usulkan Produk
+                </a>
+            </section>
+
+            <section class="panel">
+                <div class="table-tools">
+                    <input class="search-input"
+                        type="search"
+                        placeholder="Cari produk..."
+                        aria-label="Cari produk"
+                        data-table-search="productsTable">
+                    <span class="muted-note">Data contoh</span>
+                </div>
+
+                <div class="table-wrap">
+                    <table id="productsTable">
+                        <thead>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Kategori</th>
+                                <th>Harga</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Headphone</td>
+                                <td>Elektronik</td>
+                                <td>Rp2.000.000</td>
+                                <td><span class="status status-active">Tersedia</span></td>
+                            </tr>
+                            <tr>
+                                <td>Jam Digital</td>
+                                <td>Aksesori</td>
+                                <td>Rp175.000</td>
+                                <td><span class="status status-active">Tersedia</span></td>
+                            </tr>
+                            <tr>
+                                <td>Tas Sekolah</td>
+                                <td>Perlengkapan</td>
+                                <td>Rp120.000</td>
+                                <td><span class="status status-inactive">Habis</span></td>
+                            </tr>
+                            <tr>
+                                <td>Buku Catatan</td>
+                                <td>Alat Tulis</td>
+                                <td>Rp15.000</td>
+                                <td><span class="status status-active">Tersedia</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>

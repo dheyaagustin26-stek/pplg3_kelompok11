@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir Kontak</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="../index.html">
+            <span class="brand-logo">A</span>
+            <span>Admin<span class="accent">Panel</span></span>
+        </a>
+        <p class="nav-caption">MENU UTAMA</p>
+        <nav class="nav-menu">
+            <a class="nav-link" href="../index.html">▦ Dashboard</a>
+            <a class="nav-link" href="pengguna.html">♙ Data Pengguna</a>
+            <a class="nav-link" href="produk.html">▣ Data Produk</a>
+            <a class="nav-link" href="laporan.html">▤ Laporan</a>
+            <a class="nav-link active" href="kontak.html">✉ Formulir Kontak</a>
+            <a class="nav-link" href="tentang.html">ⓘ Tentang Proyek</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <h1>Formulir Kontak</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <section class="page-heading">
+                <div>
+                    <h2>Kirim Pesan</h2>
+                    <p>Lengkapi formulir berikut dengan benar.</p>
+                </div>
+            </section>
+
+            <section class="panel form-card">
+                <p class="form-intro">
+                    Tanda * menunjukkan kolom wajib diisi.
+                    Browser akan memvalidasi data sebelum formulir dikirim.
+                </p>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-field">
+                        <label for="nama">Nama lengkap *</label>
+                        <input type="text" id="nama" name="nama"
+                            placeholder="Masukkan nama lengkap"
+                            minlength="3" maxlength="60" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="email">Alamat email *</label>
+                        <input type="email" id="email" name="email"
+                            placeholder="nama@gmail.com" required>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="kategori">Kategori pesan *</label>
+                        <select id="kategori" name="kategori" required>
+                            <option value="">-- Pilih kategori --</option>
+                            <option value="pertanyaan">Pertanyaan</option>
+                            <option value="saran">Saran</option>
+                            <option value="laporan">Laporan masalah</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field">
+                        <label>Prioritas *</label>
+                        <div>
+                            <label>
+                                <input type="radio" name="prioritas"
+                                    value="normal" required>
+                                Normal
+                            </label>
+
+                            <label>
+                                <input type="radio" name="prioritas"
+                                    value="penting">
+                                Penting
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="subjek">Subjek pesan *</label>
+                        <input type="text" id="subjek" name="subjek"
+                            placeholder="Tuliskan subjek pesan"
+                            minlength="4" maxlength="80" required>
+                    </div>
+
+                    <div class="form-field full">
+                        <label for="pesan">Isi pesan *</label>
+                        <textarea id="pesan" name="pesan"
+                            placeholder="Tuliskan pesan minimal 10 karakter"
+                            minlength="10" maxlength="500"
+                            required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button class="button-primary" type="submit">
+                            Kirim Formulir
+                        </button>
+                        <button class="button-secondary" type="reset">
+                            Reset
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
