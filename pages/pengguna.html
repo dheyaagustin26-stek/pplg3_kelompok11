@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Pengguna</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js" defer></script>
+</head>
+<body>
+<div class="layout">
+    <aside class="sidebar" id="sidebar">
+        <a class="brand" href="../index.html">
+            <span class="brand-logo">A</span>
+            <span>Admin<span class="accent">Panel</span></span>
+        </a>
+        <p class="nav-caption">MENU UTAMA</p>
+        <nav class="nav-menu">
+            <a class="nav-link" href="../index.html">▦ Dashboard</a>
+            <a class="nav-link active" href="pengguna.html">♙ Data Pengguna</a>
+            <a class="nav-link" href="produk.html">▣ Data Produk</a>
+            <a class="nav-link" href="laporan.html">▤ Laporan</a>
+            <a class="nav-link" href="kontak.html">✉ Formulir Kontak</a>
+            <a class="nav-link" href="tentang.html">ⓘ Tentang Proyek</a>
+        </nav>
+    </aside>
+
+    <main class="main">
+        <header class="topbar">
+            <div class="topbar-title">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <h1>Data Pengguna</h1>
+            </div>
+        </header>
+
+        <div class="page-content">
+            <section class="page-heading">
+                <div>
+                    <h2>Daftar Pengguna</h2>
+                    <p>Informasi pengguna website.</p>
+                </div>
+                <a class="button-primary" href="kontak.html">
+                    + Tambah Pengguna
+                </a>
+            </section>
+
+            <section class="panel">
+                <div class="table-tools">
+                    <input class="search-input"
+                        type="search"
+                        placeholder="Cari nama atau email..."
+                        aria-label="Cari pengguna"
+                        data-table-search="usersTable">
+                    <span class="muted-note">Data contoh</span>
+                </div>
+
+                <div class="table-wrap">
+                    <table id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Nama</th>
+                                <th>Email</th>
+                                <th>Peran</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rani Amelia</td>
+                                <td>rani@example.com</td>
+                                <td>Editor</td>
+                                <td><span class="status status-active">Aktif</span></td>
+                            </tr>
+                            <tr>
+                                <td>Dimas Firmansyah</td>
+                                <td>dimas@example.com</td>
+                                <td>Admin</td>
+                                <td><span class="status status-active">Aktif</span></td>
+                            </tr>
+                            <tr>
+                                <td>Nadia Putri</td>
+                                <td>nadia@example.com</td>
+                                <td>Pengguna</td>
+                                <td><span class="status status-inactive">Nonaktif</span></td>
+                            </tr>
+                            <tr>
+                                <td>Fajar Aditya</td>
+                                <td>fajar@example.com</td>
+                                <td>Pengguna</td>
+                                <td><span class="status status-active">Aktif</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<div class="toast" id="toast" role="status"></div>
+</body>
+</html>
